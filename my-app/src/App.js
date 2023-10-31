@@ -25,9 +25,25 @@ import UseEffects from './Component/Hooks/UseEffects';
 import UseEffect1 from './Component/Hooks/UseEffect1';
 import UseEffect2 from './Component/Hooks/UseEffecct2';
 import UseEffecct2 from './Component/Hooks/UseEffecct2';
+import SendDataChildTo from './Component/Hooks/SendDataChildTo';
+import UseMemo from './Component/Hooks/UseMemo';
+import Ref from './Component/Hooks/Ref';
+import GetApi from './Component/Hooks/GetApi';
+import ArrayListingWithMapFunction from './Component/Hooks/ArrayListingWithMapFunction';
+import ReUseComponent from './Component/Hooks/ReUseComponent';
 
 function App() {
+  const students = [
+    { name: "anil", email: "ram@gmail.com", phone: "84651" },
+    { name: "hima", email: "ram@gmail.com", phone: "84651" },
+    { name: "sagar", email: "ram@gmail.com", phone: "84651" },
+    { name: "rahu", email: "ram@gmail.com", phone: "84651" },
+]
   const [title,setTitle] = useState('ram')
+  // Parent Alert
+  function Parentalert(data){
+    console.log(data);
+  }
   return (
    <>
   {/* <Header/>
@@ -57,7 +73,17 @@ function App() {
    {/* <UseState1/> */}
    {/* <UseEffects/> */}
    {/* <UseEffect1/> */}
-   <UseEffecct2/>
+   {/* <UseEffecct2/> */}
+   {/* <GetApi/> */}
+   {/* <ArrayListingWithMapFunction/> */}
+   {/* {
+    students.map((data)=>
+    <ReUseComponent item={data} />
+    )
+   } */}
+   {/* <SendDataChildTo alert={Parentalert}/> */}
+   {/* <UseMemo/> */}
+   <Ref/>
    </>
   );
 }
