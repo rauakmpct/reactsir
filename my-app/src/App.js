@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState,useRef } from 'react';
 import {Form, Route,Routes} from 'react-router-dom'
 import Footer from './Component/Layouts/Footer';
 import Header from './Component/Layouts/Header';
@@ -31,6 +31,15 @@ import Ref from './Component/Hooks/Ref';
 import GetApi from './Component/Hooks/GetApi';
 import ArrayListingWithMapFunction from './Component/Hooks/ArrayListingWithMapFunction';
 import ReUseComponent from './Component/Hooks/ReUseComponent';
+import Usere from './Component/Hooks/Usere';
+import Forwardref from './Component/Hooks/Forwardref';
+import UseCallBackHook from './Component/Hooks/UseCallBackHook';
+import ChildComponent from './Component/Hooks/ChildComponent';
+import UseReducer from './Component/Hooks/UseReducer';
+import UseContext from './Component/Hooks/UseContext/UseContext';
+import UseReducer1 from './Component/Hooks/UseReducer1';
+import UseMemo1 from './Component/Hooks/UseMemo1';
+import UseEffect4 from './Component/Hooks/UseEffect4';
 
 function App() {
   const students = [
@@ -44,6 +53,14 @@ function App() {
   function Parentalert(data){
     console.log(data);
   }
+  //ForwardRef
+  let inputRef=useRef
+  function updateInput()
+ {
+  inputRef.current.value="1000"
+  inputRef.current.style.color="red"
+ }
+
   return (
    <>
   {/* <Header/>
@@ -83,7 +100,19 @@ function App() {
    } */}
    {/* <SendDataChildTo alert={Parentalert}/> */}
    {/* <UseMemo/> */}
-   <Ref/>
+   {/* <Ref/> */}
+   {/* <Usere/> */}
+   {/* <Forwardref ref={inputRef} />
+  <button onClick={updateInput}>Update INputBox</button>  */}
+  {/* <UseCallBackHook/> */}
+  {/* <UseReducer/> */}
+  {/* <UseContext/> */}
+  {/* <UseReducer1/> */}
+  {/* <UseMemo1/> */}
+  <UseEffect4/>
+
+   
+   
    </>
   );
 }
